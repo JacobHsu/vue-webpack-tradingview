@@ -24,6 +24,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
     // contentBase: false, // since we use CopyWebpackPlugin.
 ```
 
+ontentbase代表html頁面所在的相對目錄，如果我們不配置項，devServer默認html所在的目錄就是項目的根目錄，並不會看見html頁面，相反展現在我們面前的時項目根目錄文件夾，因為我們根目錄下根本沒有html文件。
+
+html在編譯後實際是在dist目錄下，所以我們需要這樣配置
+
+```js
+ devServer: {
+     contentBase: 'dist', // since we use CopyWebpackPlugin.
+```
+
 ## Build Setup
 
 ``` bash
