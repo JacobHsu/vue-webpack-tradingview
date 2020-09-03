@@ -9,6 +9,21 @@ cd vue-webpack-tradingview
 npm run dev
 ```
 
+## Debug
+
+> Uncaught TypeError: c.contentWindow.widgetReady is not a function at HTMLIFrameElement.g (charting_library.min.js?a524:11)
+
+build\webpack.dev.conf.js
+
+關閉 contentBase
+
+```js
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+ devServer: {
+    hot: true,
+    // contentBase: false, // since we use CopyWebpackPlugin.
+```
+
 ## Build Setup
 
 ``` bash

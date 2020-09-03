@@ -2,3 +2,6 @@
 /config/
 /dist/
 /*.js
+/src/components/
+/src/assets/js
+/src/assets/lang

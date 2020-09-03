@@ -21,6 +21,10 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'no-redeclare': 'off',
+    'no-dupe-keys': 'off',
+    'vue/no-parsing-error': [2, { "x-invalid-end-tag": false }],
+    'space-before-function-paren': 'off',
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
